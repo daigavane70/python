@@ -1,4 +1,13 @@
-class Dog():
+class Animal():
+
+    # Parent Class Attribute
+    def __init__(self):
+        print("insde the constructor of Animal")
+
+    def show( self ):
+        print('Hello From Animal')
+
+class Dog(Animal):
 
     #   CLASS OBJECT ATTRIBUTE
     species = 'mammal'
@@ -9,7 +18,9 @@ class Dog():
         self.species = 'hello'
 
     def sayHello( self ):
+        self.show()
         print('hello master: ' + self.name + ' here' + self.species)
+
 
 mydog = Dog( "Lab", "Sammy" )
 print( mydog.breed )
